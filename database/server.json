@@ -1,0 +1,60 @@
+{
+  "wallets": [
+    {
+      "id": "38369",
+      "address": "markyndev@ews",
+      "name": "markyndev",
+      "email": "markynrodrisilva@gmail.com",
+      "groups": [
+        "client"
+      ],
+      "currency": 1977,
+      "pass": "U2FsdGVkX1+uUGdZUV6SYnmO69voSRMQEXUXoMYZjgzpRX4JW1LQKo4WGiu/fxms"
+    },
+    {
+      "id": "64457",
+      "address": "Genjizao@ews",
+      "name": "Genjizao",
+      "email": "pedrohsdamorim@gmail.com",
+      "groups": [
+        "client"
+      ],
+      "currency": 10,
+      "pass": "U2FsdGVkX1/oZ7uc6JBjbMtTBGLZWnhRQtxGiMF01hY8XRzqsaG/GcqggmPNWIpL"
+    },
+    {
+      "id": "99031",
+      "address": "Eu@ews",
+      "name": "Eu",
+      "email": "ggg@gmail.com",
+      "groups": [
+        "client"
+      ],
+      "currency": 0,
+      "pass": "U2FsdGVkX19Cx0iVCsd/yte/echyOD/eqNIXPAIYXDU="
+    },
+    {
+      "id": "64759",
+      "address": "markyndeva@ews",
+      "name": "markyndeva",
+      "email": "teste@gmail.com",
+      "groups": [
+        "client"
+      ],
+      "currency": 77,
+      "pass": "U2FsdGVkX1913StthZ85gmk5n35593bpK5N0ubRY5Qj+um/vxlUT7Kh1KbqBFuNa"
+    },
+    {
+      "id": "66780",
+      "address": "chicao@ews",
+      "name": "chicao",
+      "email": "chico@gmail.com",
+      "groups": [
+        "client"
+      ],
+      "currency": 923,
+      "pass": "U2FsdGVkX1+6gXIVNLHP7j8ZxD279dTE6KaP3ALCMFc="
+    }
+  ],
+  "posts": []
+}

@@ -1,0 +1,123 @@
+<head>
+    <title>Seu Perfil - EWS</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    .card {
+        position: relative;
+        z-index: 1;
+        background: #FFFFFF;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .card .tbutton {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #6c5194;
+        width: 70%;
+        border: 0;
+        padding: 20px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+    .card .tbutton:hover {
+        background: #533e72;
+    }
+
+    body {
+        background: #754eaf;
+        background-color: #754eaf;
+        font-family: 'Montserrat', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .currency {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .user-page {
+        width: 80%;
+        padding: 2% 0 0;
+        margin: auto;
+    }
+
+    @media only screen and (orientation: portrait) {
+        .user-page {
+            width: 95%;
+            margin: auto;
+        }
+
+        .card {}
+
+        .card .tbutton {
+            width: 100%;
+            padding: 22px;
+
+        }
+
+    }
+
+    .btnsaldo {
+        margin-left: 10px;
+        border: none;
+        background-color: transparent;
+    }
+</style>
+
+<body>
+    <a style="text-decoration: none; color:white;" href="../">🠜 VOLTAR PARA O LOGIN</a>
+    <div class="user-page">
+        <div class="card">
+            <img width="200px" src="/images/profile.png">
+            <br> <br>
+            <h1>Ola, {{nome}}!</h1>
+
+            <h1 class="currency" style="display:flex; align-items: center;
+    justify-content: center;color:#a66bff;"><b id="currencyoutput">{{saldo}} LOZ</b> <button onclick="hidesaldo()"
+                    class="btnsaldo">👁️</button></h1>
+
+            <p>{{address}}</p>
+        </div>
+    </div>
+    <div class="user-page">
+        <div class="card">
+
+
+            <br><br>
+            <button class="tbutton" onclick="window.location='./profile/transfer';">Transferir</button>
+            <br><br>
+
+        </div>
+    </div>
+</body>
+<script>
+    let saldo = "{{saldo}}";
+ let verhide = 0
+    let currencyoutput = document.getElementById("currencyoutput")
+
+    function hidesaldo() {
+        console.log("teste")
+        
+        console.log(verhide)
+        if (verhide == 0) {
+            currencyoutput.innerHTML = "--- " + "LOZ"
+            console.log("foi")
+                   verhide = 1
+        } else {
+            currencyoutput.innerHTML = saldo + " LOZ"
+                        console.log("não foi")
+            verhide = 0
+        }
+    }
+</script>
