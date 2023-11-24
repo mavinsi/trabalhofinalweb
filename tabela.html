@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de CNAEs</title>
+</head>
+<body>
+
+<h1>Tabela de CNAEs</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody id="cnae-table">
+     
+    </tbody>
+</table>
+
+<script>
+  
+    function fetchCNAEs() {
+        fetch('https://servicodados.ibge.gov.br/api/v2/cnae/classes')
+            .then(response => response.json())
+            .then(data => {
+       
+                renderCNAETable(data);
+            })
+            .catch(error => {
+                console.error('Erro ao obter dados da API:', error);
+            });
+    }
+
+    function renderCNAETable(cnaeData) {
+        const cnaeTableBody = document.getElementById('cnae-table');
+        cnaeData.forEach(cnae => {
+            const row = cnaeTableBody.insertRow();
+
+            const idCell = row.insertCell(0);
+            const descricaoCell = row.insertCell(1);
+
+            idCell.textContent = cnae.id;
+            descricaoCell.textContent = cnae.descricao;
+        });
+    }
+
+    fetchCNAEs();
+</script>
+
+</body>
+</html>
